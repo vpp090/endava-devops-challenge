@@ -1,0 +1,14 @@
+az group create --name myResourceGroupVM --location eastus
+az vm create \
+    --resource-group myResourceGroupVM \
+    --name myVM \
+    --image UbuntuLTS \
+    --admin-username azureuser \
+    --generate-ssh-keys
+    
+ ssh azureuser@40.68.254.142
+
+sudo apt update && sudo apt install lamp-server^
+
+sudo mysql_secure_installation
+
